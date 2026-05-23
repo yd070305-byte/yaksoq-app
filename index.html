@@ -60,6 +60,7 @@
   let participants=[];
   let selections={};
   let memos={};
+  let memoDrafts={};
   let selectedMonth=5;
   let selectedDay=23;
   let currentUser="";
@@ -134,6 +135,7 @@
     participants=[];
     selections={};
     memos={};
+    memoDrafts={};
     currentUser="";
 
     await set(ref(db,"rooms/"+currentRoomId),{
@@ -166,11 +168,13 @@
       participants=Array.isArray(room.participants)?room.participants:[];
       selections=safeObj(room.selections);
       memos=safeObj(room.memos);
+      memoDrafts={...memos};
     }else{
       currentRoomName="약속 모임";
       participants=[];
       selections={};
       memos={};
+      memoDrafts={};
       await set(ref(db,"rooms/"+id),{
         id,
         name:currentRoomName,
@@ -198,6 +202,7 @@
       participants=Array.isArray(room.participants)?room.participants:[];
       selections=safeObj(room.selections);
       memos=safeObj(room.memos);
+      memoDrafts={...memos};
       qs("roomTitle").textContent=currentRoomName;
       qs("shareLink").value=getRoomUrl(id);
       renderAll();
@@ -272,6 +277,7 @@
   qs("backButton").addEventListener("click",()=>showScreen("scheduleScreen"));
 
   qs("detailSave").addEventListener("click",async()=>{
+    memos={...memoDrafts};
     await saveFullRoom();
     renderAll();
     showScreen("scheduleScreen");
@@ -404,13 +410,12 @@
       const people=Object.entries(selections[k]||{}).filter(([n,v])=>v.times&&v.times[t]);
       const div=document.createElement("div");
       div.className="time-detail";
-      div.innerHTML='<div class="time-top"><strong>'+t+'</strong><span>'+people.length+'명 선택</span></div><div class="time-actions"><button class="possible '+(active==='possible'?'active':'')+'">가능</button><button class="maybe '+(active==='maybe'?'active':'')+'">애매</button></div><textarea class="memo-input" placeholder="이 시간대 메모. 예: 10분 늦을 수 있음">'+(currentUser?(memos[k+'-'+t+'-'+currentUser]||''):'')+'</textarea><div class="memo-text">'+(people.length?people.map(([n,v])=>'<b>'+n+'</b> '+(v.times[t]==='maybe'?'애매':'가능')+' · '+(memos[k+'-'+t+'-'+n]||'메모 없음')).join('<br>'):'아직 선택한 사람이 없어요.')+'</div>';
+      div.innerHTML='<div class="time-top"><strong>'+t+'</strong><span>'+people.length+'명 선택</span></div><div class="time-actions"><button class="possible '+(active==='possible'?'active':'')+'">가능</button><button class="maybe '+(active==='maybe'?'active':'')+'">애매</button></div><textarea class="memo-input" placeholder="이 시간대 메모. 예: 10분 늦을 수 있음">'+(currentUser?(memoDrafts[k+'-'+t+'-'+currentUser]||memos[k+'-'+t+'-'+currentUser]||''):'')+'</textarea><div class="memo-text">'+(people.length?people.map(([n,v])=>'<b>'+n+'</b> '+(v.times[t]==='maybe'?'애매':'가능')+' · '+(memos[k+'-'+t+'-'+n]||'메모 없음')).join('<br>'):'아직 선택한 사람이 없어요.')+'</div>';
       div.querySelector(".possible").addEventListener("click",()=>selectTime(t,"possible"));
       div.querySelector(".maybe").addEventListener("click",()=>selectTime(t,"maybe"));
       div.querySelector(".memo-input").addEventListener("input",e=>{
         if(!currentUser)return;
-        memos[k+'-'+t+'-'+currentUser]=e.target.value;
-        saveRoomPatch({memos,updatedAt:Date.now()});
+        memoDrafts[k+'-'+t+'-'+currentUser]=e.target.value;
       });
       list.appendChild(div);
     });
