@@ -1,23 +1,20 @@
-.toast{
-  top:auto;
-  bottom:86px;
-}
-
 .copyright{
-  margin-top:42px;
-  padding-bottom:40px;
+  margin-top:46px !important;
+  padding-bottom:52px !important;
 
-  text-align:center;
+  text-align:center !important;
 
-  font-size:9px;
-  line-height:1.9;
+  font-size:9px !important;
+  line-height:1.9 !important;
 
-  color:#a7afa0;
+  color:#9ea69a !important;
 
-  opacity:.72;
+  opacity:.68 !important;
 
-  letter-spacing:-0.2px;
+  letter-spacing:-0.3px !important;
 
-  user-select:none;
-  pointer-events:none;
+  user-select:none !important;
+  pointer-events:none !important;
+
+  font-weight:500 !important;
 }
