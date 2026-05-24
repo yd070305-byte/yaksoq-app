@@ -79,6 +79,24 @@
     return location.origin+location.pathname+"?room="+encodeURIComponent(id);
   }
 
+  function userStorageKey(roomId=currentRoomId){
+    return "yaksoq_user_"+roomId;
+  }
+
+  function saveCurrentUser(){
+    if(!currentRoomId || !currentUser)return;
+    localStorage.setItem(userStorageKey(),currentUser);
+  }
+
+  function loadCurrentUser(){
+    if(!currentRoomId)return;
+    const savedName=localStorage.getItem(userStorageKey());
+    if(savedName){
+      currentUser=savedName;
+      qs("nameInput").value=savedName;
+    }
+  }
+
   function roomRef(){
     return ref(db,"rooms/"+currentRoomId);
   }
@@ -189,6 +207,7 @@
 
     qs("roomTitle").textContent=currentRoomName;
     qs("shareLink").value=getRoomUrl(id);
+    loadCurrentUser();
     listenRoom(id);
     showScreen("scheduleScreen");
     renderAll();
@@ -263,9 +282,11 @@
     const n=qs("nameInput").value.trim();
     if(!n){toast("이름을 먼저 입력해줘");return;}
     currentUser=n;
+    saveCurrentUser();
     if(!participants.includes(n)) participants.push(n);
     await saveRoomPatch({participants,updatedAt:Date.now()});
     renderMembers();
+    renderCalendar();
     toast(n+"님이 참여자로 추가됐어요");
   });
 
@@ -288,6 +309,7 @@
     selections={};
     memos={};
     memoDrafts={};
+    if(currentRoomId){localStorage.removeItem(userStorageKey());}
     currentUser="";
     currentRoomId="";
     currentRoomName="";
