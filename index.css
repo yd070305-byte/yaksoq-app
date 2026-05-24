@@ -2,3 +2,13 @@
   top:auto;
   bottom:86px;
 }
+
+.copyright{
+  margin-top:28px;
+  padding-bottom:22px;
+  text-align:center;
+  font-size:11px;
+  line-height:1.7;
+  color:#97a08f;
+  opacity:.92;
+}
