@@ -428,6 +428,7 @@
           e.stopPropagation();
           if(!currentUser){toast("이름 확인을 먼저 눌러줘");return;}
           selectedDay=d;
+          clearDayMenu();
           if(btn.dataset.action==="status"){
             openStatusPanel();
             return;
