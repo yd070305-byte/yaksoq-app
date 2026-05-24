@@ -4,11 +4,20 @@
 }
 
 .copyright{
-  margin-top:28px;
-  padding-bottom:22px;
+  margin-top:42px;
+  padding-bottom:40px;
+
   text-align:center;
-  font-size:11px;
-  line-height:1.7;
-  color:#97a08f;
-  opacity:.92;
+
+  font-size:9px;
+  line-height:1.9;
+
+  color:#a7afa0;
+
+  opacity:.72;
+
+  letter-spacing:-0.2px;
+
+  user-select:none;
+  pointer-events:none;
 }
