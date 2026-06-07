@@ -7,7 +7,7 @@
   <style>
     *{margin:0;padding:0;box-sizing:border-box}
     body{min-height:100vh;font-family:-apple-system,BlinkMacSystemFont,"Pretendard","Noto Sans KR",sans-serif;color:#20231f;background:radial-gradient(circle at top left,rgba(199,226,179,.44),transparent 34%),radial-gradient(circle at bottom right,rgba(223,244,196,.5),transparent 30%),linear-gradient(180deg,#f4f6f1 0%,#edf3e9 100%)}
-    button,input,textarea{font-family:inherit}button{border:none;cursor:pointer}.app{width:100%;min-height:100vh;display:flex;justify-content:center}.screen{width:100%;max-width:430px;min-height:100vh;display:none}.screen.active{display:block}.create-screen{padding:34px 24px;display:none;align-items:center}.create-screen.active{display:flex}.first-content{width:100%}.first-title{font-size:52px;line-height:1.02;letter-spacing:-.09em;margin-bottom:18px;font-weight:900}.first-sub{font-size:15px;line-height:1.7;color:#6d7568;margin-bottom:34px;font-weight:500}.first-input{width:100%;height:64px;border-radius:22px;background:rgba(255,255,255,.82);border:1px solid #dce5d5;padding:0 20px;font-size:16px;font-weight:700;outline:none;box-shadow:0 10px 30px rgba(60,70,55,.05);margin-bottom:16px}input::placeholder,textarea::placeholder{color:#a4aba0;font-weight:600}.main-btn{width:100%;height:64px;border-radius:999px;background:#2f7d43;color:#fff;font-size:17px;font-weight:900;box-shadow:0 18px 38px rgba(47,125,67,.24)}.main-btn:disabled{background:#b9c8b1;box-shadow:none;cursor:not-allowed}.danger-btn{display:flex;align-items:center;justify-content:center;gap:6px;width:132px;height:38px;margin:18px auto 0;border-radius:999px;background:rgba(255,255,255,.62);border:1px dashed #e16b6b;color:#c94d4d;font-size:12px;font-weight:900;box-shadow:0 8px 20px rgba(201,77,77,.08)}.danger-btn::before{content:"🗑";font-size:13px}.danger-btn:active{transform:scale(.97)}.bottom-text{margin-top:18px;text-align:center;font-size:12px;color:#879082;line-height:1.6;font-weight:600}.schedule-screen,.detail-screen{padding:22px 18px 96px}.top{padding:8px 2px 18px}.room-name{display:inline-flex;align-items:center;gap:7px;padding:8px 13px;border-radius:999px;background:rgba(255,255,255,.78);border:1px solid #e1e8dc;color:#2f7d43;font-size:12px;font-weight:900;box-shadow:0 10px 24px rgba(42,58,37,.04);margin-bottom:16px}.room-name i{width:7px;height:7px;border-radius:50%;background:#2f7d43}.title{font-size:35px;line-height:1.08;letter-spacing:-.08em;margin-bottom:10px;font-weight:900}.desc{font-size:13.5px;line-height:1.65;color:#687264}.card{background:rgba(255,255,255,.92);border:1px solid #e4e9df;border-radius:30px;padding:20px;margin-bottom:14px;box-shadow:0 16px 38px rgba(42,58,37,.06)}.section-title{display:flex;justify-content:space-between;align-items:flex-end;gap:12px;margin-bottom:15px}.section-title h2{font-size:21px;letter-spacing:-.055em}.section-title span{font-size:12px;font-weight:900;color:#7a8475;white-space:nowrap}label{display:block;font-size:12.5px;font-weight:900;margin-bottom:8px}.name-row{display:grid;grid-template-columns:1fr 82px;gap:8px;margin-bottom:14px}.name-input{width:100%;height:54px;border-radius:18px;border:1px solid #dde5d7;background:#fff;padding:0 16px;font-size:15px;font-weight:700;outline:none}.small-btn{height:54px;border-radius:18px;background:#2f7d43;color:#fff;font-size:14px;font-weight:900}.share-box{margin-bottom:14px;padding:14px;border-radius:22px;background:rgba(255,255,255,.72);border:1px dashed #b9c8b1}.share-box strong{display:block;font-size:13px;margin-bottom:6px}.share-box p{font-size:11.5px;line-height:1.5;color:#778272;font-weight:800;margin-bottom:10px}.share-link-row{display:grid;grid-template-columns:1fr 78px;gap:8px}.share-link{height:38px;border-radius:14px;background:#fff;border:1px solid #e3e9df;padding:0 10px;font-size:11px;font-weight:800;color:#697264;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.copy-btn{height:38px;border-radius:14px;background:#2f7d43;color:#fff;font-size:12px;font-weight:900}.guide-box{border-radius:22px;background:#f7faf4;border:1px solid #e4e9df;margin-bottom:14px;overflow:hidden}.guide-summary{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px}.guide-summary strong{display:block;font-size:13px;margin-bottom:4px}.guide-summary span{font-size:11.5px;font-weight:800;color:#778272}.step-pill{padding:7px 10px;border-radius:999px;background:#edf7e5;color:#2f7d43;font-size:11px;font-weight:900;white-space:nowrap}.member-panel{display:none;border-top:1px solid #e4e9df;padding:12px 14px 14px;background:rgba(255,255,255,.4)}.guide-box.open .member-panel{display:block}.member-panel-title{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;font-size:11.5px;font-weight:900;color:#778272}.member-row{display:flex;gap:8px;overflow-x:auto;padding-bottom:2px}.member-chip{flex-shrink:0;padding:9px 11px;border-radius:999px;background:#fff;border:1px solid #e3e9df;font-size:12px;font-weight:900;color:#667061;display:flex;align-items:center;gap:7px}.member-chip i{width:7px;height:7px;border-radius:50%;background:#2f7d43}.empty{font-size:12px;color:#879082;font-weight:800;padding:3px 0}.month-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}.month-chip{height:42px;border-radius:15px;background:#f7faf4;border:1px solid #e3e9df;color:#657060;font-size:12.5px;font-weight:900}.month-chip.active{background:#2f7d43;border-color:#2f7d43;color:#fff;box-shadow:0 12px 26px rgba(47,125,67,.18)}.weekdays,.calendar{display:grid;grid-template-columns:repeat(7,1fr);gap:7px}.weekdays{margin-bottom:7px}.weekdays div{text-align:center;font-size:10.5px;color:#8a9286;font-weight:900}.day{min-height:61px;border-radius:17px;background:#f7faf4;border:1px solid #e3e9df;padding:8px 7px;position:relative;overflow:visible;text-align:left;color:#20231f}.day strong{font-size:12.5px}.day.blank{opacity:0;pointer-events:none}.day.mine{background:#2f7d43;border-color:#2f7d43;color:#fff;box-shadow:0 10px 20px rgba(47,125,67,.18)}.day.other{background:#dff4c4;border-color:#c7e8af}.day.selected{outline:3px solid rgba(47,125,67,.28)}.dots{position:absolute;left:7px;bottom:7px;display:flex;gap:3px;max-width:78%;flex-wrap:wrap}.dots i{width:5px;height:5px;border-radius:50%;background:#4f8dff;display:block;box-shadow:0 0 0 1px rgba(255,255,255,.55)}.day.mine .dots i{background:#b9d0ff}.day-menu{position:absolute;z-index:50;left:50%;top:-70px;transform:translateX(-50%);width:128px;background:#fff;border:1px solid #dde5d7;border-radius:18px;box-shadow:0 18px 35px rgba(42,58,37,.16);padding:6px;display:none}.day.show-menu .day-menu{display:block}.day-menu button{width:100%;height:30px;border-radius:12px;background:transparent;font-size:11.5px;font-weight:900;color:#596353}.day-menu .primary{background:#edf7e5;color:#2f7d43}.legend{display:flex;gap:8px;margin-top:13px}.legend span{display:flex;align-items:center;gap:5px;font-size:10.5px;color:#788172;font-weight:800}.legend i{width:9px;height:9px;border-radius:50%;background:#2f7d43}.detail-header{display:flex;align-items:center;gap:10px;margin-bottom:16px}.back-btn{width:38px;height:38px;border-radius:50%;background:rgba(255,255,255,.8);font-size:18px;font-weight:900;color:#2f7d43;border:1px solid #e1e8dc}.detail-title{font-size:28px;letter-spacing:-.07em;line-height:1.15}.time-list{display:flex;flex-direction:column;gap:10px}.time-detail{border:1px solid #e3e9df;border-radius:20px;background:#f8faf6;padding:13px}.time-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}.time-top strong{font-size:15px}.time-top span{font-size:11px;font-weight:900;color:#4f8dff}.time-actions{display:grid;grid-template-columns:1fr 1fr;gap:7px;margin-bottom:8px}.time-actions button{height:34px;border-radius:13px;background:#fff;border:1px solid #dde5d7;font-size:11.5px;font-weight:900;color:#657060}.time-actions button.active{background:#2f7d43;color:#fff;border-color:#2f7d43}.memo-input{width:100%;min-height:54px;border-radius:14px;border:1px solid #dde5d7;background:#fff;padding:10px 12px;font-size:12px;font-weight:700;outline:none;resize:none;margin-top:8px}.memo-text{font-size:11.5px;line-height:1.5;color:#6d7568;background:#fff;border:1px solid #edf1e8;border-radius:14px;padding:9px;margin-top:7px}.panel-dim{position:fixed;inset:0;background:rgba(21,30,20,.22);z-index:25;display:none}.panel-dim.open{display:block}.status-panel{position:fixed;left:50%;top:50%;transform:translate3d(-50%,-50%,0) scale(.94);width:calc(100vw - 36px);max-width:430px;max-height:78dvh;background:#fff;border-radius:30px;padding:20px 18px 24px;box-shadow:0 24px 70px rgba(42,58,37,.24);z-index:30;transition:.25s ease;overflow-y:auto;opacity:0;pointer-events:none}.status-panel.open{transform:translate3d(-50%,-50%,0) scale(1);opacity:1;pointer-events:auto}.panel-handle{width:44px;height:5px;background:#dbe3d6;border-radius:999px;margin:0 auto 16px}.status-person{border:1px solid #e4e9df;border-radius:20px;padding:13px;margin-bottom:10px;background:#f8faf6}.status-person-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}.status-name{font-size:14px;font-weight:900}.status-badge{padding:5px 8px;border-radius:999px;background:#edf7e5;color:#2f7d43;font-size:11px;font-weight:900}.status-times{font-size:12px;color:#657060;font-weight:800;line-height:1.55}.toast{position:fixed;left:50%;top:calc(env(safe-area-inset-top,0px) + 22px);transform:translate3d(-50%,-18px,0);width:calc(100vw - 36px);max-width:394px;background:#263424;color:#fff;padding:14px 16px;border-radius:999px;text-align:center;font-size:13px;font-weight:900;opacity:0;pointer-events:none;transition:.25s;z-index:2147483647;box-shadow:0 14px 34px rgba(0,0,0,.18);will-change:transform,opacity}.toast.show{opacity:1;transform:translate3d(-50%,0,0)}
+    button,input,textarea{font-family:inherit}button{border:none;cursor:pointer}.app{width:100%;min-height:100vh;display:flex;justify-content:center}.screen{width:100%;max-width:430px;min-height:100vh;display:none}.screen.active{display:block}.create-screen{padding:34px 24px;display:none;align-items:center}.create-screen.active{display:flex}.first-content{width:100%}.first-title{font-size:52px;line-height:1.02;letter-spacing:-.09em;margin-bottom:18px;font-weight:900}.first-sub{font-size:15px;line-height:1.7;color:#6d7568;margin-bottom:34px;font-weight:500}.first-input{width:100%;height:64px;border-radius:22px;background:rgba(255,255,255,.82);border:1px solid #dce5d5;padding:0 20px;font-size:16px;font-weight:700;outline:none;box-shadow:0 10px 30px rgba(60,70,55,.05);margin-bottom:16px}input::placeholder,textarea::placeholder{color:#a4aba0;font-weight:600}.main-btn{width:100%;height:64px;border-radius:999px;background:#2f7d43;color:#fff;font-size:17px;font-weight:900;box-shadow:0 18px 38px rgba(47,125,67,.24)}.main-btn:disabled{background:#b9c8b1;box-shadow:none;cursor:not-allowed}.danger-btn{display:flex;align-items:center;justify-content:center;gap:6px;width:132px;height:38px;margin:18px auto 0;border-radius:999px;background:rgba(255,255,255,.62);border:1px dashed #e16b6b;color:#c94d4d;font-size:12px;font-weight:900;box-shadow:0 8px 20px rgba(201,77,77,.08)}.danger-btn::before{content:"🗑";font-size:13px}.danger-btn:active{transform:scale(.97)}.bottom-text{margin-top:18px;text-align:center;font-size:12px;color:#879082;line-height:1.6;font-weight:600}.schedule-screen,.detail-screen{padding:22px 18px 96px}.top{padding:8px 2px 18px}.room-name{display:inline-flex;align-items:center;gap:7px;padding:8px 13px;border-radius:999px;background:rgba(255,255,255,.78);border:1px solid #e1e8dc;color:#2f7d43;font-size:12px;font-weight:900;box-shadow:0 10px 24px rgba(42,58,37,.04);margin-bottom:16px}.room-name i{width:7px;height:7px;border-radius:50%;background:#2f7d43}.title{font-size:35px;line-height:1.08;letter-spacing:-.08em;margin-bottom:10px;font-weight:900}.desc{font-size:13.5px;line-height:1.65;color:#687264}.card{background:rgba(255,255,255,.92);border:1px solid #e4e9df;border-radius:30px;padding:20px;margin-bottom:14px;box-shadow:0 16px 38px rgba(42,58,37,.06)}.section-title{display:flex;justify-content:space-between;align-items:flex-end;gap:12px;margin-bottom:15px}.section-title h2{font-size:21px;letter-spacing:-.055em}.section-title span{font-size:12px;font-weight:900;color:#7a8475;white-space:nowrap}label{display:block;font-size:12.5px;font-weight:900;margin-bottom:8px}.name-row{display:grid;grid-template-columns:1fr 82px;gap:8px;margin-bottom:14px}.name-input{width:100%;height:54px;border-radius:18px;border:1px solid #dde5d7;background:#fff;padding:0 16px;font-size:15px;font-weight:700;outline:none}.small-btn{height:54px;border-radius:18px;background:#2f7d43;color:#fff;font-size:14px;font-weight:900}.share-box{margin-bottom:14px;padding:14px;border-radius:22px;background:rgba(255,255,255,.72);border:1px dashed #b9c8b1}.share-box strong{display:block;font-size:13px;margin-bottom:6px}.share-box p{font-size:11.5px;line-height:1.5;color:#778272;font-weight:800;margin-bottom:10px}.share-link-row{display:grid;grid-template-columns:1fr 78px;gap:8px}.share-link{height:38px;border-radius:14px;background:#fff;border:1px solid #e3e9df;padding:0 10px;font-size:11px;font-weight:800;color:#697264;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.copy-btn{height:38px;border-radius:14px;background:#2f7d43;color:#fff;font-size:12px;font-weight:900}.guide-box{border-radius:22px;background:#f7faf4;border:1px solid #e4e9df;margin-bottom:14px;overflow:hidden}.guide-summary{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px}.guide-summary strong{display:block;font-size:13px;margin-bottom:4px}.guide-summary span{font-size:11.5px;font-weight:800;color:#778272}.step-pill{padding:7px 10px;border-radius:999px;background:#edf7e5;color:#2f7d43;font-size:11px;font-weight:900;white-space:nowrap}.member-panel{display:none;border-top:1px solid #e4e9df;padding:12px 14px 14px;background:rgba(255,255,255,.4)}.guide-box.open .member-panel{display:block}.member-panel-title{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;font-size:11.5px;font-weight:900;color:#778272}.member-row{display:flex;gap:8px;overflow-x:auto;padding-bottom:2px}.member-chip{flex-shrink:0;padding:9px 11px;border-radius:999px;background:#fff;border:1px solid #e3e9df;font-size:12px;font-weight:900;color:#667061;display:flex;align-items:center;gap:7px}.member-chip i{width:7px;height:7px;border-radius:50%;background:#2f7d43}.empty{font-size:12px;color:#879082;font-weight:800;padding:3px 0}.month-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}.month-chip{height:42px;border-radius:15px;background:#f7faf4;border:1px solid #e3e9df;color:#657060;font-size:12.5px;font-weight:900}.month-chip.active{background:#2f7d43;border-color:#2f7d43;color:#fff;box-shadow:0 12px 26px rgba(47,125,67,.18)}.weekdays,.calendar{display:grid;grid-template-columns:repeat(7,1fr);gap:7px}.weekdays{margin-bottom:7px}.weekdays div{text-align:center;font-size:10.5px;color:#8a9286;font-weight:900}.day{min-height:61px;border-radius:17px;background:#f7faf4;border:1px solid #e3e9df;padding:8px 7px;position:relative;overflow:visible;text-align:left;color:#20231f}.day strong{font-size:12.5px}.day.blank{opacity:0;pointer-events:none}.day.mine{background:#2f7d43;border-color:#2f7d43;color:#fff;box-shadow:0 10px 20px rgba(47,125,67,.18)}.day.other{background:#dff4c4;border-color:#c7e8af}.day.selected{outline:3px solid rgba(47,125,67,.28)}.dots{position:absolute;left:7px;bottom:7px;display:flex;gap:3px;max-width:78%;flex-wrap:wrap}.dots i{width:5px;height:5px;border-radius:50%;background:#4f8dff;display:block;box-shadow:0 0 0 1px rgba(255,255,255,.55)}.day.mine .dots i{background:#b9d0ff}.day-menu{position:absolute;z-index:50;left:50%;top:-70px;transform:translateX(-50%);width:128px;background:#fff;border:1px solid #dde5d7;border-radius:18px;box-shadow:0 18px 35px rgba(42,58,37,.16);padding:6px;display:none}.day.show-menu .day-menu{display:block}.day-menu button{width:100%;height:30px;border-radius:12px;background:transparent;font-size:11.5px;font-weight:900;color:#596353}.day-menu .primary{background:#edf7e5;color:#2f7d43}.legend{display:flex;gap:8px;margin-top:13px}.legend span{display:flex;align-items:center;gap:5px;font-size:10.5px;color:#788172;font-weight:800}.legend i{width:9px;height:9px;border-radius:50%;background:#2f7d43}.detail-header{display:flex;align-items:center;gap:10px;margin-bottom:16px}.back-btn{width:38px;height:38px;border-radius:50%;background:rgba(255,255,255,.8);font-size:18px;font-weight:900;color:#2f7d43;border:1px solid #e1e8dc}.detail-title{font-size:28px;letter-spacing:-.07em;line-height:1.15}.date-pill{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 16px;border-radius:22px;background:#f7faf4;border:1px solid #e3e9df;margin-bottom:16px}.date-pill strong{font-size:15px;letter-spacing:-.04em}.range-preview{border-radius:26px;background:#263424;color:#fff;padding:18px;margin-bottom:14px;box-shadow:0 16px 36px rgba(38,52,36,.16)}.range-preview span{display:inline-block;font-size:11px;font-weight:900;color:#d6e3d2;margin-bottom:8px}.range-preview h2{font-size:30px;letter-spacing:-.06em;line-height:1.1}.full-day-option{display:flex;align-items:center;justify-content:space-between;gap:12px;width:100%;padding:15px 16px;border-radius:22px;background:#f7faf4;border:1px solid #dbe8d2;margin-bottom:14px;box-shadow:0 10px 24px rgba(42,58,37,.04);transition:.2s ease}.full-day-option.active{background:#edf7e5;border-color:#b8ddb0}.full-day-option div strong{display:block;font-size:15px;letter-spacing:-.04em}.toggle{width:48px;height:28px;border-radius:999px;background:#c5cec0;position:relative;flex-shrink:0;box-shadow:0 8px 18px rgba(47,125,67,.08);transition:.2s ease}.toggle::after{content:"";position:absolute;left:4px;top:4px;width:20px;height:20px;border-radius:50%;background:white;transition:.2s ease;box-shadow:0 3px 8px rgba(0,0,0,.12)}.full-day-option.active .toggle{background:#2f7d43;box-shadow:0 8px 18px rgba(47,125,67,.18)}.full-day-option.active .toggle::after{left:24px}.wheel-card{display:grid;grid-template-columns:1fr;gap:13px;transition:.2s ease}.wheel-card.disabled{opacity:.38;filter:grayscale(.2);pointer-events:none}.wheel-box{border-radius:24px;background:#f8faf6;border:1px solid #e3e9df;padding:16px;overflow:hidden}.wheel-label{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}.wheel-label strong{font-size:15px;letter-spacing:-.04em}.wheel-label span{font-size:11px;font-weight:900;color:#7b8576}.wheel-shell{height:164px;position:relative;border-radius:20px;background:#fff;border:1px solid #edf1e8;overflow:hidden}.wheel-shell::before{content:"";position:absolute;left:10px;right:10px;top:50%;height:46px;transform:translateY(-50%);border-radius:16px;background:transparent;border:1px solid #e7eee2;z-index:0;pointer-events:none}.wheel{position:relative;z-index:1;height:100%;overflow-y:auto;scroll-snap-type:y mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:none;padding:59px 0}.wheel::-webkit-scrollbar{display:none}.wheel-item{width:100%;height:46px;display:flex;align-items:center;justify-content:center;scroll-snap-align:center;font-weight:900;color:#a5ada1;font-size:18px;letter-spacing:-.03em;transition:.16s ease;user-select:none;background:transparent}.wheel-item.active{font-size:27px;color:#2f7d43;letter-spacing:-.06em}.memo{width:100%;min-height:78px;border-radius:20px;border:1px solid #dde5d7;background:#fff;padding:13px 15px;font-size:13px;font-weight:700;outline:none;resize:none}.panel-dim{position:fixed;inset:0;background:rgba(21,30,20,.22);z-index:25;display:none}.panel-dim.open{display:block}.status-panel{position:fixed;left:50%;top:50%;transform:translate3d(-50%,-50%,0) scale(.94);width:calc(100vw - 36px);max-width:430px;max-height:78dvh;background:#fff;border-radius:30px;padding:20px 18px 24px;box-shadow:0 24px 70px rgba(42,58,37,.24);z-index:30;transition:.25s ease;overflow-y:auto;opacity:0;pointer-events:none}.status-panel.open{transform:translate3d(-50%,-50%,0) scale(1);opacity:1;pointer-events:auto}.panel-handle{width:44px;height:5px;background:#dbe3d6;border-radius:999px;margin:0 auto 16px}.status-person{border:1px solid #e4e9df;border-radius:20px;padding:13px;margin-bottom:10px;background:#f8faf6}.status-person-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}.status-name{font-size:14px;font-weight:900}.status-badge{padding:5px 8px;border-radius:999px;background:#edf7e5;color:#2f7d43;font-size:11px;font-weight:900}.status-times{font-size:12px;color:#657060;font-weight:800;line-height:1.55}.toast{position:fixed;left:50%;top:calc(env(safe-area-inset-top,0px) + 22px);transform:translate3d(-50%,-18px,0);width:calc(100vw - 36px);max-width:394px;background:#263424;color:#fff;padding:14px 16px;border-radius:999px;text-align:center;font-size:13px;font-weight:900;opacity:0;pointer-events:none;transition:.25s;z-index:2147483647;box-shadow:0 14px 34px rgba(0,0,0,.18);will-change:transform,opacity}.toast.show{opacity:1;transform:translate3d(-50%,0,0)}.copyright{margin-top:46px;padding-bottom:52px;text-align:center;font-size:9px;line-height:1.9;color:#9ea69a;opacity:.68;letter-spacing:-.3px;font-weight:500;user-select:none;pointer-events:none}
   </style>
 </head>
 <body>
@@ -29,28 +29,22 @@
     <section class="card"><div class="section-title"><h2 id="calendarTitle">5월 날짜 선택</h2><span id="monthLabel">2026 05</span></div><div class="weekdays"><div>일</div><div>월</div><div>화</div><div>수</div><div>목</div><div>금</div><div>토</div></div><div id="calendar" class="calendar"></div><div class="legend"><span><i></i>내 선택</span></div></section>
     <button id="saveButton" class="main-btn" type="button">내 일정 저장하기</button>
     <button id="deleteRoomButton" class="danger-btn" type="button">방 폭파하기</button>
-    <div style="
-  margin-top:46px;
-  padding-bottom:52px;
-  text-align:center;
-  font-size:9px;
-  line-height:1.9;
-  color:#8a9783;
-  opacity:.68;
-  letter-spacing:-0.3px;
-  font-weight:500;
-  user-select:none;
-  pointer-events:none;
-">
-  개인 제작 서비스입니다.<br>
-  무단 배포·유료 판매·상업적 이용은 삼가주세요 :)<br><br>
-  Made by 김연두 · yaksoq
-</div>
+    <div class="copyright">개인 제작 서비스입니다.<br>무단 배포·유료 판매·상업적 이용은 삼가주세요 :)<br><br>Made by 김연두 · yaksoq</div>
   </section>
 
   <section id="detailScreen" class="screen detail-screen">
     <div class="detail-header"><button id="backButton" class="back-btn" type="button">‹</button><h1 id="detailTitle" class="detail-title">시간 선택</h1></div>
-    <section class="card"><div class="section-title"><h2>시간대 선택</h2><span>06:00 - 24:00</span></div><div id="detailTimeList" class="time-list"></div></section>
+    <section class="card">
+      <div class="date-pill"><strong id="detailDateText">2026.05.25</strong></div>
+      <div class="range-preview"><span>선택된 가능 시간</span><h2 id="rangeText">시간을 선택해주세요</h2></div>
+      <button id="fullDayOption" class="full-day-option" type="button"><div><strong>All Day</strong></div><div class="toggle"></div></button>
+      <div class="section-title"><h2>시간 휠</h2></div>
+      <div id="wheelCard" class="wheel-card">
+        <div class="wheel-box"><div class="wheel-label"><strong>~부터 가능</strong><span id="startLabel">선택 안 함</span></div><div class="wheel-shell"><div id="startWheel" class="wheel"></div></div></div>
+        <div class="wheel-box"><div class="wheel-label"><strong>~까지 가능</strong><span id="endLabel">선택 안 함</span></div><div class="wheel-shell"><div id="endWheel" class="wheel"></div></div></div>
+      </div>
+    </section>
+    <section class="card"><div class="section-title"><h2>메모</h2><span>선택사항</span></div><textarea id="detailMemo" class="memo" placeholder="예: 7시 이후가 제일 편해요 / 10분 정도 늦을 수도 있어요"></textarea></section>
     <button id="detailSave" class="main-btn" type="button">이 날 일정 저장하기</button>
   </section>
 </div>
@@ -71,459 +65,100 @@
 
   const app = initializeApp(firebaseConfig);
   const db = getDatabase(app);
-
   const months=["1월","2월","3월","4월","5월","6월","7월","8월","9월","10월","11월","12월"];
-  const times=Array.from({length:19},(_,i)=>String(i+6).padStart(2,"0")+":00");
-
-  let participants=[];
-  let selections={};
-  let memos={};
-  let memoDrafts={};
-  let selectedMonth=5;
-  let selectedDay=23;
-  let currentUser="";
-  let currentRoomId="";
-  let currentRoomName="";
-  let roomUnsubscribe=null;
-
+  const hours=Array.from({length:25},(_,i)=>i);
+  const blankValue="blank";
+  const itemHeight=46;
+  let participants=[],selections={},selectedMonth=5,selectedDay=23,currentUser="",currentRoomId="",currentRoomName="",roomUnsubscribe=null;
+  let startHour=blankValue,endHour=blankValue,isFullDay=false,startTimer=null,endTimer=null,currentMemo="";
   const qs=id=>document.getElementById(id);
 
-  function generateRoomId(){
-    return "room-"+Date.now().toString(36)+"-"+Math.random().toString(36).slice(2,8);
+  function generateRoomId(){return "room-"+Date.now().toString(36)+"-"+Math.random().toString(36).slice(2,8)}
+  function getRoomUrl(id){return location.origin+location.pathname+"?room="+encodeURIComponent(id)}
+  function userStorageKey(roomId=currentRoomId){return "yaksoq_user_"+roomId}
+  function saveCurrentUser(){if(!currentRoomId||!currentUser)return;localStorage.setItem(userStorageKey(),currentUser)}
+  function loadCurrentUser(){if(!currentRoomId)return;const savedName=localStorage.getItem(userStorageKey());if(savedName){currentUser=savedName;qs("nameInput").value=savedName}}
+  function roomRef(){return ref(db,"rooms/"+currentRoomId)}
+  function showScreen(id){document.querySelectorAll(".screen").forEach(s=>s.classList.remove("active"));qs(id).classList.add("active");window.scrollTo(0,0)}
+  function toast(msg){const t=qs("toast");t.textContent=msg;t.classList.remove("show");void t.offsetWidth;t.classList.add("show");clearTimeout(window.__toast);window.__toast=setTimeout(()=>t.classList.remove("show"),1800)}
+  function key(m=selectedMonth,d=selectedDay){return m+"-"+d}
+  function safeObj(value){return value&&typeof value==="object"?value:{}}
+  async function saveRoomPatch(patch){if(!currentRoomId)return;await update(roomRef(),patch)}
+  async function saveFullRoom(){if(!currentRoomId)return;await set(roomRef(),{id:currentRoomId,name:currentRoomName,participants,selections,updatedAt:Date.now()})}
+  function formatHour(hour){if(hour===blankValue||hour===null||hour===undefined)return "선택 안 함";return String(hour).padStart(2,"0")+":00"}
+  function formatRangeFromData(data){if(!data)return "선택한 시간 없음";if(data.allDay)return "All Day";const hasStart=data.startHour!==blankValue&&data.startHour!==undefined&&data.startHour!==null;const hasEnd=data.endHour!==blankValue&&data.endHour!==undefined&&data.endHour!==null;if(hasStart&&hasEnd)return formatHour(data.startHour)+" ~ "+formatHour(data.endHour);if(hasStart&&!hasEnd)return formatHour(data.startHour)+"부터 가능";if(!hasStart&&hasEnd)return formatHour(data.endHour)+"까지 가능";return "선택한 시간 없음"}
+  function formatRange(){return formatRangeFromData({allDay:isFullDay,startHour,endHour})}
+  function getDayName(){return `${selectedMonth}월 ${selectedDay}일`}
+
+  function buildSelectionData(){
+    return {allDay:isFullDay,startHour,endHour,memo:currentMemo,updatedAt:Date.now()};
   }
 
-  function getRoomUrl(id){
-    return location.origin+location.pathname+"?room="+encodeURIComponent(id);
-  }
-
-  function userStorageKey(roomId=currentRoomId){
-    return "yaksoq_user_"+roomId;
-  }
-
-  function saveCurrentUser(){
-    if(!currentRoomId || !currentUser)return;
-    localStorage.setItem(userStorageKey(),currentUser);
-  }
-
-  function loadCurrentUser(){
-    if(!currentRoomId)return;
-    const savedName=localStorage.getItem(userStorageKey());
-    if(savedName){
-      currentUser=savedName;
-      qs("nameInput").value=savedName;
-    }
-  }
-
-  function roomRef(){
-    return ref(db,"rooms/"+currentRoomId);
-  }
-
-  function showScreen(id){
-    document.querySelectorAll(".screen").forEach(s=>s.classList.remove("active"));
-    qs(id).classList.add("active");
-    window.scrollTo(0,0);
-  }
-
-  function toast(msg){
-    const t=qs("toast");
-    t.textContent=msg;
-    t.classList.remove("show");
-    void t.offsetWidth;
-    t.classList.add("show");
-    clearTimeout(window.__toast);
-    window.__toast=setTimeout(()=>t.classList.remove("show"),1800);
-  }
-
-  function key(m=selectedMonth,d=selectedDay){
-    return m+"-"+d;
-  }
-
-  function ensureDay(){
-    const k=key();
-    if(!selections[k]) selections[k]={};
-    if(currentUser&&!selections[k][currentUser]) selections[k][currentUser]={times:{}};
-  }
-
-  function safeObj(value){
-    return value && typeof value === "object" ? value : {};
-  }
-
-  async function saveRoomPatch(patch){
-    if(!currentRoomId) return;
-    await update(roomRef(),patch);
-  }
-
-  async function saveFullRoom(){
-    if(!currentRoomId) return;
-    await set(roomRef(),{
-      id:currentRoomId,
-      name:currentRoomName,
-      participants,
-      selections,
-      memos,
-      updatedAt:Date.now()
-    });
-  }
+  function copyText(text){const ta=document.createElement("textarea");ta.value=text;ta.style.position="fixed";ta.style.top="0";ta.style.left="0";ta.style.opacity="0";document.body.appendChild(ta);ta.focus();ta.select();let ok=false;try{ok=document.execCommand("copy")}catch(e){ok=false}document.body.removeChild(ta);return ok}
 
   async function createRoom(){
-    currentRoomId=generateRoomId();
-    currentRoomName=qs("roomInput").value.trim();
-    participants=[];
-    selections={};
-    memos={};
-    memoDrafts={};
-    currentUser="";
-
-    await set(ref(db,"rooms/"+currentRoomId),{
-      id:currentRoomId,
-      name:currentRoomName,
-      participants:[],
-      selections:{},
-      memos:{},
-      createdAt:Date.now(),
-      updatedAt:Date.now()
-    });
-
-    const url=getRoomUrl(currentRoomId);
-    qs("roomTitle").textContent=currentRoomName;
-    qs("shareLink").value=url;
-    history.pushState(null,"", "?room="+encodeURIComponent(currentRoomId));
-    listenRoom(currentRoomId);
-    showScreen("scheduleScreen");
-    renderAll();
-    toast("약속방 링크가 생성됐어요");
+    currentRoomId=generateRoomId();currentRoomName=qs("roomInput").value.trim();participants=[];selections={};currentUser="";
+    await set(ref(db,"rooms/"+currentRoomId),{id:currentRoomId,name:currentRoomName,participants:[],selections:{},createdAt:Date.now(),updatedAt:Date.now()});
+    qs("roomTitle").textContent=currentRoomName;qs("shareLink").value=getRoomUrl(currentRoomId);history.pushState(null,"","?room="+encodeURIComponent(currentRoomId));listenRoom(currentRoomId);showScreen("scheduleScreen");renderAll();toast("약속방 링크가 생성됐어요");
   }
 
   async function loadRoom(id){
-    currentRoomId=id;
-    const snapshot=await get(child(ref(db),"rooms/"+id));
-
-    if(snapshot.exists()){
-      const room=snapshot.val();
-      currentRoomName=room.name||"약속 모임";
-      participants=Array.isArray(room.participants)?room.participants:[];
-      selections=safeObj(room.selections);
-      memos=safeObj(room.memos);
-      memoDrafts={...memos};
-    }else{
-      currentRoomName="약속 모임";
-      participants=[];
-      selections={};
-      memos={};
-      memoDrafts={};
-      await set(ref(db,"rooms/"+id),{
-        id,
-        name:currentRoomName,
-        participants:[],
-        selections:{},
-        memos:{},
-        createdAt:Date.now(),
-        updatedAt:Date.now()
-      });
-    }
-
-    qs("roomTitle").textContent=currentRoomName;
-    qs("shareLink").value=getRoomUrl(id);
-    loadCurrentUser();
-    listenRoom(id);
-    showScreen("scheduleScreen");
-    renderAll();
+    currentRoomId=id;const snapshot=await get(child(ref(db),"rooms/"+id));
+    if(snapshot.exists()){const room=snapshot.val();currentRoomName=room.name||"약속 모임";participants=Array.isArray(room.participants)?room.participants:[];selections=safeObj(room.selections)}
+    else{currentRoomName="약속 모임";participants=[];selections={};await set(ref(db,"rooms/"+id),{id,name:currentRoomName,participants:[],selections:{},createdAt:Date.now(),updatedAt:Date.now()})}
+    qs("roomTitle").textContent=currentRoomName;qs("shareLink").value=getRoomUrl(id);loadCurrentUser();listenRoom(id);showScreen("scheduleScreen");renderAll();
   }
 
   function listenRoom(id){
-    if(roomUnsubscribe) roomUnsubscribe();
-    roomUnsubscribe=onValue(ref(db,"rooms/"+id),(snapshot)=>{
-      if(!snapshot.exists()) return;
-      const room=snapshot.val();
-      currentRoomName=room.name||currentRoomName||"약속 모임";
-      participants=Array.isArray(room.participants)?room.participants:[];
-      selections=safeObj(room.selections);
-      memos=safeObj(room.memos);
-      memoDrafts={...memos};
-      qs("roomTitle").textContent=currentRoomName;
-      qs("shareLink").value=getRoomUrl(id);
-      renderAll();
-      if(qs("detailScreen").classList.contains("active")) renderDetail();
-      if(qs("statusPanel").classList.contains("open")) openStatusPanel();
+    if(roomUnsubscribe)roomUnsubscribe();
+    roomUnsubscribe=onValue(ref(db,"rooms/"+id),snapshot=>{
+      if(!snapshot.exists())return;const room=snapshot.val();currentRoomName=room.name||currentRoomName||"약속 모임";participants=Array.isArray(room.participants)?room.participants:[];selections=safeObj(room.selections);qs("roomTitle").textContent=currentRoomName;qs("shareLink").value=getRoomUrl(id);renderAll();if(qs("statusPanel").classList.contains("open"))openStatusPanel();
     });
   }
 
-  function copyText(text){
-    const ta=document.createElement("textarea");
-    ta.value=text;
-    ta.style.position="fixed";
-    ta.style.top="0";
-    ta.style.left="0";
-    ta.style.opacity="0";
-    document.body.appendChild(ta);
-    ta.focus();
-    ta.select();
-    let ok=false;
-    try{ok=document.execCommand("copy");}catch(e){ok=false;}
-    document.body.removeChild(ta);
-    return ok;
-  }
-
-  qs("roomInput").addEventListener("input",()=>{
-    qs("createButton").disabled=!qs("roomInput").value.trim();
-  });
-
-  qs("createButton").addEventListener("click",async()=>{
-    if(!qs("roomInput").value.trim()) return;
-    try{
-      await createRoom();
-    }catch(e){
-      console.error(e);
-      toast("약속방 생성 중 오류가 났어요");
-    }
-  });
-
-  qs("copyLinkButton").addEventListener("click",async()=>{
-    const link=qs("shareLink").value;
-    if(!link){toast("먼저 약속방을 만들어줘");return;}
-    let ok=false;
-    try{
-      if(navigator.clipboard&&window.isSecureContext){
-        await navigator.clipboard.writeText(link);
-        ok=true;
-      }
-    }catch(e){ok=false;}
-    if(!ok) ok=copyText(link);
-    if(ok) toast("공유 링크가 복사됐어요");
-    else window.prompt("아래 링크를 직접 복사해줘",link);
-  });
-
+  qs("roomInput").addEventListener("input",()=>{qs("createButton").disabled=!qs("roomInput").value.trim()});
+  qs("createButton").addEventListener("click",async()=>{if(!qs("roomInput").value.trim())return;try{await createRoom()}catch(e){console.error(e);toast("약속방 생성 중 오류가 났어요")}});
+  qs("copyLinkButton").addEventListener("click",async()=>{const link=qs("shareLink").value;if(!link){toast("먼저 약속방을 만들어줘");return}let ok=false;try{if(navigator.clipboard&&window.isSecureContext){await navigator.clipboard.writeText(link);ok=true}}catch(e){ok=false}if(!ok)ok=copyText(link);if(ok)toast("공유 링크가 복사됐어요");else window.prompt("아래 링크를 직접 복사해줘",link)});
   qs("memberToggle").addEventListener("click",()=>qs("memberToggle").classList.toggle("open"));
-
-  qs("nameConfirm").addEventListener("click",async()=>{
-    const n=qs("nameInput").value.trim();
-    if(!n){toast("이름을 먼저 입력해줘");return;}
-    currentUser=n;
-    saveCurrentUser();
-    if(!participants.includes(n)) participants.push(n);
-    await saveRoomPatch({participants,updatedAt:Date.now()});
-    renderMembers();
-    renderCalendar();
-    toast(n+"님이 참여자로 추가됐어요");
-  });
-
-  qs("saveButton").addEventListener("click",async()=>{
-    if(!currentUser){toast("이름 확인을 먼저 눌러줘");return;}
-    await saveFullRoom();
-    toast("내 일정이 저장됐어요");
-  });
-
-  qs("deleteRoomButton").addEventListener("click",async()=>{
-    if(!currentRoomId){showScreen("createScreen");return;}
-    const ok=confirm("현재 약속방 데이터를 모두 삭제하고 처음 화면으로 돌아갈까요?");
-    if(!ok)return;
-    try{
-      await remove(ref(db,"rooms/"+currentRoomId));
-    }catch(e){
-      console.error(e);
-    }
-    participants=[];
-    selections={};
-    memos={};
-    memoDrafts={};
-    if(currentRoomId){localStorage.removeItem(userStorageKey());}
-    currentUser="";
-    currentRoomId="";
-    currentRoomName="";
-    qs("roomInput").value="";
-    qs("nameInput").value="";
-    qs("shareLink").value="";
-    history.pushState(null,"",location.pathname);
-    showScreen("createScreen");
-    renderAll();
-    toast("약속방이 초기화됐어요");
-  });
-
+  qs("nameConfirm").addEventListener("click",async()=>{const n=qs("nameInput").value.trim();if(!n){toast("이름을 먼저 입력해줘");return}currentUser=n;saveCurrentUser();if(!participants.includes(n))participants.push(n);await saveRoomPatch({participants,updatedAt:Date.now()});renderMembers();renderCalendar();toast(n+"님이 참여자로 추가됐어요")});
+  qs("saveButton").addEventListener("click",async()=>{if(!currentUser){toast("이름 확인을 먼저 눌러줘");return}await saveFullRoom();toast("내 일정이 저장됐어요")});
+  qs("deleteRoomButton").addEventListener("click",async()=>{if(!currentRoomId){showScreen("createScreen");return}const ok=confirm("현재 약속방 데이터를 모두 삭제하고 처음 화면으로 돌아갈까요?");if(!ok)return;try{await remove(ref(db,"rooms/"+currentRoomId))}catch(e){console.error(e)}participants=[];selections={};if(currentRoomId)localStorage.removeItem(userStorageKey());currentUser="";currentRoomId="";currentRoomName="";qs("roomInput").value="";qs("nameInput").value="";qs("shareLink").value="";history.pushState(null,"",location.pathname);showScreen("createScreen");renderAll();toast("약속방이 초기화됐어요")});
   qs("backButton").addEventListener("click",()=>showScreen("scheduleScreen"));
-
-  qs("detailSave").addEventListener("click",async()=>{
-    memos={...memoDrafts};
-    await saveFullRoom();
-    renderAll();
-    showScreen("scheduleScreen");
-    toast("이 날 일정이 저장됐어요");
-  });
-
   qs("panelDim").addEventListener("click",closeStatusPanel);
-  document.addEventListener("click",e=>{if(!e.target.closest(".day"))clearDayMenu();});
+  document.addEventListener("click",e=>{if(!e.target.closest(".day"))clearDayMenu()});
 
-  function renderAll(){
-    renderMembers();
-    renderMonths();
-    renderCalendar();
-  }
-
-  function renderMembers(){
-    qs("progressText").textContent=participants.length+"명 중 "+participants.length+"명 참여 완료";
-    qs("memberCount").textContent=participants.length+"명";
-    const row=qs("memberRow");
-    row.innerHTML="";
-    if(!participants.length){
-      row.innerHTML='<div class="empty">아직 참여자가 없어요.</div>';
-      return;
-    }
-    participants.forEach(n=>{
-      const c=document.createElement("div");
-      c.className="member-chip";
-      c.innerHTML="<i></i>"+n;
-      row.appendChild(c);
-    });
-  }
-
-  function renderMonths(){
-    const grid=qs("monthGrid");
-    grid.innerHTML="";
-    months.forEach((m,i)=>{
-      const month=i+1;
-      const b=document.createElement("button");
-      b.className="month-chip"+(month===selectedMonth?" active":"");
-      b.textContent=m;
-      b.addEventListener("click",()=>{
-        selectedMonth=month;
-        selectedDay=1;
-        renderAll();
-      });
-      grid.appendChild(b);
-    });
-  }
-
-  function daysInMonth(m){return new Date(2026,m,0).getDate();}
-  function firstDay(m){return new Date(2026,m-1,1).getDay();}
-  function dayPeople(m,d){return Object.keys(selections[m+"-"+d]||{});}
-  function hasMine(m,d){return !!(currentUser&&selections[m+"-"+d]&&selections[m+"-"+d][currentUser]);}
-
-  function dots(c){
-    return '<div class="dots">'+Array.from({length:Math.min(c,6)}).map(()=>'<i></i>').join('')+'</div>';
-  }
-
-  function clearDayMenu(){
-    document.querySelectorAll(".day").forEach(dayEl=>dayEl.classList.remove("show-menu","selected"));
-  }
-
-  function renderCalendar(){
-    qs("calendarTitle").textContent=selectedMonth+"월 날짜 선택";
-    qs("monthLabel").textContent="2026 "+String(selectedMonth).padStart(2,"0");
-
-    const cal=qs("calendar");
-    cal.innerHTML="";
-
-    for(let i=0;i<firstDay(selectedMonth);i++){
-      const blank=document.createElement("div");
-      blank.className="day blank";
-      cal.appendChild(blank);
-    }
-
-    for(let d=1;d<=daysInMonth(selectedMonth);d++){
-      const count=dayPeople(selectedMonth,d).length;
-      const mine=hasMine(selectedMonth,d);
-      const dayEl=document.createElement("div");
-      dayEl.className="day"+(mine?" mine":count>0?" other":"");
-      dayEl.innerHTML=`
-        <strong>${d}</strong>
-        ${count?dots(count):""}
-        <div class="day-menu">
-          <button type="button" class="primary" data-action="time">시간 선택하기</button>
-          <button type="button" data-action="status">이 날 현황보기</button>
-        </div>
-      `;
-
-      dayEl.addEventListener("click",(e)=>{
-        e.stopPropagation();
-        selectedDay=d;
-        clearDayMenu();
-        dayEl.classList.add("selected","show-menu");
-      });
-
-      dayEl.querySelectorAll(".day-menu button").forEach(btn=>{
-        btn.addEventListener("click",(e)=>{
-          e.preventDefault();
-          e.stopPropagation();
-          if(!currentUser){toast("이름 확인을 먼저 눌러줘");return;}
-          selectedDay=d;
-          clearDayMenu();
-          if(btn.dataset.action==="status"){
-            openStatusPanel();
-            return;
-          }
-          ensureDay();
-          saveFullRoom();
-          openDetail();
-        });
-      });
-
-      cal.appendChild(dayEl);
-    }
-  }
+  function renderAll(){renderMembers();renderMonths();renderCalendar()}
+  function renderMembers(){qs("progressText").textContent=participants.length+"명 중 "+participants.length+"명 참여 완료";qs("memberCount").textContent=participants.length+"명";const row=qs("memberRow");row.innerHTML="";if(!participants.length){row.innerHTML='<div class="empty">아직 참여자가 없어요.</div>';return}participants.forEach(n=>{const c=document.createElement("div");c.className="member-chip";c.innerHTML="<i></i>"+n;row.appendChild(c)})}
+  function renderMonths(){const grid=qs("monthGrid");grid.innerHTML="";months.forEach((m,i)=>{const month=i+1,b=document.createElement("button");b.className="month-chip"+(month===selectedMonth?" active":"");b.textContent=m;b.addEventListener("click",()=>{selectedMonth=month;selectedDay=1;renderAll()});grid.appendChild(b)})}
+  function daysInMonth(m){return new Date(2026,m,0).getDate()}function firstDay(m){return new Date(2026,m-1,1).getDay()}function dayPeople(m,d){return Object.keys(selections[m+"-"+d]||{})}function hasMine(m,d){return !!(currentUser&&selections[m+"-"+d]&&selections[m+"-"+d][currentUser])}function dots(c){return '<div class="dots">'+Array.from({length:Math.min(c,6)}).map(()=>'<i></i>').join('')+'</div>'}function clearDayMenu(){document.querySelectorAll(".day").forEach(dayEl=>dayEl.classList.remove("show-menu","selected"))}
+  function renderCalendar(){qs("calendarTitle").textContent=selectedMonth+"월 날짜 선택";qs("monthLabel").textContent="2026 "+String(selectedMonth).padStart(2,"0");const cal=qs("calendar");cal.innerHTML="";for(let i=0;i<firstDay(selectedMonth);i++){const blank=document.createElement("div");blank.className="day blank";cal.appendChild(blank)}for(let d=1;d<=daysInMonth(selectedMonth);d++){const count=dayPeople(selectedMonth,d).length,mine=hasMine(selectedMonth,d);const dayEl=document.createElement("div");dayEl.className="day"+(mine?" mine":count>0?" other":"");dayEl.innerHTML=`<strong>${d}</strong>${count?dots(count):""}<div class="day-menu"><button type="button" class="primary" data-action="time">시간 선택하기</button><button type="button" data-action="status">이 날 현황보기</button></div>`;dayEl.addEventListener("click",e=>{e.stopPropagation();selectedDay=d;clearDayMenu();dayEl.classList.add("selected","show-menu")});dayEl.querySelectorAll(".day-menu button").forEach(btn=>{btn.addEventListener("click",e=>{e.preventDefault();e.stopPropagation();if(!currentUser){toast("이름 확인을 먼저 눌러줘");return}selectedDay=d;clearDayMenu();if(btn.dataset.action==="status"){openStatusPanel();return}openDetail()})});cal.appendChild(dayEl)}}
 
   function openDetail(){
-    qs("detailTitle").innerHTML=selectedMonth+"월 "+selectedDay+"일<br>시간 선택";
-    renderDetail();
-    showScreen("detailScreen");
+    const existing=selections[key()]&&selections[key()][currentUser]?selections[key()][currentUser]:null;
+    if(existing){isFullDay=!!existing.allDay;startHour=existing.startHour??blankValue;endHour=existing.endHour??blankValue;currentMemo=existing.memo||""}
+    else{isFullDay=false;startHour=blankValue;endHour=blankValue;currentMemo=""}
+    qs("detailTitle").innerHTML=selectedMonth+"월 "+selectedDay+"일<br>가능 시간 선택";qs("detailDateText").textContent=`2026.${String(selectedMonth).padStart(2,"0")}.${String(selectedDay).padStart(2,"0")}`;qs("detailMemo").value=currentMemo;updateWheelUI();showScreen("detailScreen");
   }
 
-  function renderDetail(){
-    const list=qs("detailTimeList");
-    list.innerHTML="";
-    times.forEach(t=>{
-      const k=key();
-      const userData=currentUser&&selections[k]?selections[k][currentUser]:null;
-      const active=userData&&userData.times&&userData.times[t];
-      const people=Object.entries(selections[k]||{}).filter(([n,v])=>v.times&&v.times[t]);
-      const div=document.createElement("div");
-      div.className="time-detail";
-      div.innerHTML='<div class="time-top"><strong>'+t+'</strong><span>'+people.length+'명 선택</span></div><div class="time-actions"><button class="possible '+(active==='possible'?'active':'')+'">가능</button><button class="maybe '+(active==='maybe'?'active':'')+'">애매</button></div><textarea class="memo-input" placeholder="이 시간대 메모. 예: 10분 늦을 수 있음">'+(currentUser?(memoDrafts[k+'-'+t+'-'+currentUser]||memos[k+'-'+t+'-'+currentUser]||''):'')+'</textarea><div class="memo-text">'+(people.length?people.map(([n,v])=>'<b>'+n+'</b> '+(v.times[t]==='maybe'?'애매':'가능')+' · '+(memos[k+'-'+t+'-'+n]||'메모 없음')).join('<br>'):'아직 선택한 사람이 없어요.')+'</div>';
-      div.querySelector(".possible").addEventListener("click",()=>selectTime(t,"possible"));
-      div.querySelector(".maybe").addEventListener("click",()=>selectTime(t,"maybe"));
-      div.querySelector(".memo-input").addEventListener("input",e=>{
-        if(!currentUser)return;
-        memoDrafts[k+'-'+t+'-'+currentUser]=e.target.value;
-      });
-      list.appendChild(div);
-    });
+  function updateWheelUI(){
+    const startValues=[blankValue,...hours.slice(0,24)];
+    const endValues=startHour===blankValue?[blankValue,...hours]:[blankValue,...hours.filter(h=>h>startHour)];
+    if(!startValues.includes(startHour))startHour=blankValue;if(!endValues.includes(endHour))endHour=blankValue;
+    qs("rangeText").textContent=formatRange();qs("startLabel").textContent=formatHour(startHour);qs("endLabel").textContent=formatHour(endHour);qs("fullDayOption").classList.toggle("active",isFullDay);qs("wheelCard").classList.toggle("disabled",isFullDay);renderWheel(qs("startWheel"),startValues,startHour);renderWheel(qs("endWheel"),endValues,endHour);
   }
+  function renderWheel(wheel,values,activeValue){wheel.innerHTML="";values.forEach(value=>{const item=document.createElement("button");item.type="button";item.className="wheel-item"+(value===activeValue?" active":"");item.textContent=formatHour(value);item.dataset.value=value;item.addEventListener("click",()=>{if(wheel.id==="startWheel")setStart(value);else setEnd(value)});wheel.appendChild(item)});requestAnimationFrame(()=>{const index=values.indexOf(activeValue);if(index>=0)wheel.scrollTop=index*itemHeight})}
+  function nearestValueFromWheel(wheel,values){const index=Math.round(wheel.scrollTop/itemHeight);return values[Math.max(0,Math.min(values.length-1,index))]}
+  function setStart(value){startHour=value;if(startHour!==blankValue&&endHour!==blankValue&&endHour<=startHour)endHour=blankValue;isFullDay=false;updateWheelUI()}
+  function setEnd(value){if(value!==blankValue&&startHour!==blankValue&&value<=startHour)value=blankValue;endHour=value;isFullDay=false;updateWheelUI()}
+  qs("startWheel").addEventListener("scroll",()=>{clearTimeout(startTimer);startTimer=setTimeout(()=>{const value=nearestValueFromWheel(qs("startWheel"),[blankValue,...hours.slice(0,24)]);setStart(value)},90)});
+  qs("endWheel").addEventListener("scroll",()=>{clearTimeout(endTimer);endTimer=setTimeout(()=>{const endValues=startHour===blankValue?[blankValue,...hours]:[blankValue,...hours.filter(h=>h>startHour)];const value=nearestValueFromWheel(qs("endWheel"),endValues);setEnd(value)},90)});
+  qs("fullDayOption").addEventListener("click",()=>{isFullDay=!isFullDay;if(isFullDay){startHour=0;endHour=24}else{startHour=blankValue;endHour=blankValue}updateWheelUI()});
+  qs("detailMemo").addEventListener("input",e=>{currentMemo=e.target.value});
+  qs("detailSave").addEventListener("click",async()=>{if(!currentUser){toast("이름 확인을 먼저 눌러줘");return}if(!selections[key()])selections[key()]={};selections[key()][currentUser]=buildSelectionData();await saveRoomPatch({selections,updatedAt:Date.now()});renderAll();showScreen("scheduleScreen");toast(formatRange()+" 저장됐어요")});
 
-  async function selectTime(t,status){
-    if(!currentUser){toast("이름 확인을 먼저 눌러줘");return;}
-    ensureDay();
-    selections[key()][currentUser].times[t]=status;
-    await saveRoomPatch({selections,updatedAt:Date.now()});
-    renderDetail();
-  }
-
-  function openStatusPanel(){
-    const k=key();
-    const people=Object.entries(selections[k]||{});
-    qs("panelTitle").textContent=selectedMonth+"월 "+selectedDay+"일 현황";
-    qs("panelCount").textContent=people.length+"명";
-    qs("statusList").innerHTML=people.length?people.map(([n,v])=>{
-      const entries=Object.entries(v.times||{});
-      return '<div class="status-person"><div class="status-person-top"><span class="status-name">'+n+'</span><span class="status-badge">선택 완료</span></div><div class="status-times">'+(entries.length?entries.map(([t,s])=>t+' · '+(s==='maybe'?'애매':'가능')+' · '+(memos[k+'-'+t+'-'+n]||'메모 없음')).join('<br>'):'선택한 시간 없음')+'</div></div>';
-    }).join(''):'<div class="empty">아직 이 날을 선택한 사람이 없어요.</div>';
-    qs("panelDim").classList.add("open");
-    qs("statusPanel").classList.add("open");
-  }
-
-  function closeStatusPanel(){
-    qs("panelDim").classList.remove("open");
-    qs("statusPanel").classList.remove("open");
-  }
-
-  async function init(){
-    const params=new URLSearchParams(location.search);
-    const id=params.get("room");
-    if(id){
-      await loadRoom(id);
-    }else{
-      showScreen("createScreen");
-      renderAll();
-    }
-  }
-
+  function openStatusPanel(){const k=key(),people=Object.entries(selections[k]||{});qs("panelTitle").textContent=selectedMonth+"월 "+selectedDay+"일 현황";qs("panelCount").textContent=people.length+"명";qs("statusList").innerHTML=people.length?people.map(([n,v])=>'<div class="status-person"><div class="status-person-top"><span class="status-name">'+n+'</span><span class="status-badge">선택 완료</span></div><div class="status-times">'+formatRangeFromData(v)+(v.memo?'<br>'+v.memo:'')+'</div></div>').join(''):'<div class="empty">아직 이 날을 선택한 사람이 없어요.</div>';qs("panelDim").classList.add("open");qs("statusPanel").classList.add("open")}
+  function closeStatusPanel(){qs("panelDim").classList.remove("open");qs("statusPanel").classList.remove("open")}
+  async function init(){const params=new URLSearchParams(location.search);const id=params.get("room");if(id)await loadRoom(id);else{showScreen("createScreen");renderAll()}}
   init();
 </script>
 </body>
